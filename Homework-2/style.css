@@ -1,16 +1,20 @@
 .btn-cart {
     padding: 15px;
     border-radius: 23px;
-    background-color: #997122;
-    margin: 3% 0% 0% 20%;
+    background-color: #ba8e36;
+    margin: 3% 0% 0% 16%;
     color: #fff;
+    transition: all ease-in-out .4s;
+    cursor: pointer;
 }
 
 .buy-btn {
-    background-color: #3c87f7;
+    background-color: #679bd3;
     border-radius: 20px;
     color: #fff;
     padding: 9px;
+    transition: all ease-in-out .4s;
+    cursor: pointer;
 }
 
 .products {
@@ -28,13 +32,22 @@ img {
 
 .product-item {
     width: 21%;
-    border: 15px solid #63460d;
+    border: 12px solid #63460d;
     padding: 3%;
     margin: 1% 10%;
     border-radius: 34px;
 }
 
 header {
-    background-color: #3cacaa;
+    background-color: #1c6160;
     height: 129px;
+}
+
+.buy-btn:hover {
+    background-color: #9e7729;
+    color: #000
+}
+
+.btn-cart:hover {
+    background-color: #54acdf;
 }
