@@ -1,0 +1,13 @@
+.text_block {
+    width: 40%;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 6px;
+}
+
+#text_btn {
+    padding: 8px;
+    background-color: #bd893c;
+    color: #fff;
+    margin: 30px 0 0 392px;
+}

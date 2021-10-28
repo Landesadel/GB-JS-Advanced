@@ -1,0 +1,43 @@
+input {
+    width: 200px;
+    padding: 5px 10px;
+    margin: 10px 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+.error_msg {
+    color: #aa0f0f;
+    margin: 10px 0;
+}
+
+.invalid {
+    border: 2px solid #aa0f0f;
+}
+
+.valid {
+    border: 2px solid #015001;
+}
+
+.form_block {
+    border: 5px solid #df9f40;
+    padding: 26px;
+    width: 18%;
+    margin: 0 auto;
+}
+
+#btn_form {
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5% 0 0 33%;
+    background-color: #9d5818;
+    color: #fff;
+    transition: all ease-in-out .4s;
+}
+
+#btn_form:hover {
+    background-color: #fff;
+    color: #9d5818;
+}
