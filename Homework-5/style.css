@@ -1,0 +1,131 @@
+/* поиск */
+
+.btn-search {
+    background-color: transparent;
+    border: none;
+    color: #fafafa;
+    font-size: 1.2em;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+}
+
+.search-form {
+    position: relative;
+    margin-left: 7%;
+    display: inline-block;
+}
+
+.search-field:focus {
+    outline: none;
+}
+
+.search-field {
+    box-sizing: border-box;
+    width: 200px;
+    color: #fafafa;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fafafa;
+}
+
+
+/* . */
+
+.btn-cart {
+    padding: 15px;
+    border-radius: 23px;
+    background-color: #ba8e36;
+    margin: 3% 0% 0% 8%;
+    color: #fff;
+    transition: all ease-in-out .4s;
+    cursor: pointer;
+}
+
+.cart-block {
+    box-shadow: 0 0 5px rgb(0 0 0 / 62%);
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 3px solid #63460d;
+    left: 9px;
+    top: 118px;
+    position: absolute;
+    background-color: #dabd83;
+    padding: 20px;
+    color: black;
+    width: 300px;
+}
+
+.invisible {
+    display: none;
+}
+
+.cart-block:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -21px;
+    left: 237px;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 21px solid #63460d;
+}
+
+.del-btn {
+    background-color: #679bd3;
+    transition: all ease-in-out .4s;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.del-btn:hover {
+    background-color: #fff;
+    color: #679bd3;
+}
+
+.buy-btn {
+    background-color: #679bd3;
+    border-radius: 20px;
+    color: #fff;
+    padding: 9px;
+    transition: all ease-in-out .4s;
+    cursor: pointer;
+}
+
+.products {
+    margin: 32px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+img {
+    display: block;
+    float: right;
+}
+
+.product-item {
+    width: 21%;
+    border: 12px solid #63460d;
+    padding: 3%;
+    margin: 1% 10%;
+    border-radius: 34px;
+}
+
+header {
+    background-color: #1c6160;
+    height: 129px;
+}
+
+.buy-btn:hover {
+    background-color: #9e7729;
+    color: #000
+}
+
+.btn-cart:hover {
+    background-color: #54acdf;
+}
