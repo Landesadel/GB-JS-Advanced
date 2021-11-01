@@ -52,7 +52,7 @@
     top: 118px;
     position: absolute;
     background-color: #dabd83;
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     color: black;
     width: 300px;
 }
@@ -67,10 +67,14 @@
     height: 0;
     position: absolute;
     top: -21px;
-    left: 237px;
+    left: 127px;
     border-left: 18px solid transparent;
     border-right: 18px solid transparent;
     border-bottom: 21px solid #63460d;
+}
+
+.cart-item {
+    margin-bottom: 25px;
 }
 
 .del-btn {
@@ -79,6 +83,7 @@
     cursor: pointer;
     border-radius: 20px;
     color: #fff;
+    margin-top: 10px;
 }
 
 .del-btn:hover {
