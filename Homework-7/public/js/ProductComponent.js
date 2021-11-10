@@ -37,8 +37,8 @@ Vue.component('product', {
                 <img :src="img" alt="Some img">
                 <div class="desc">
                     <h3>{{product.product_name}}</h3>
-                    <p>{{product.price}}</p>
-                    <button class="buy-btn" @click="$emit('add-product', product)">Купить</button>
+                    <p>Цена: {{product.price}}&#36</p>
+                    <button class="buy-btn" @click="$emit('add-product', product)">Купить!</button>
                 </div>
             </div>
     `

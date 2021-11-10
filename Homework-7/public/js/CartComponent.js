@@ -1,5 +1,3 @@
-// const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
-
 Vue.component('cart', {
     data() {
         return {
@@ -18,6 +16,7 @@ Vue.component('cart', {
             });
     },
     methods: {
+
         addProduct(item) {
             let find = this.cartItems.find(el => el.id_product === item.id_product);
             if (find) {
@@ -36,19 +35,6 @@ Vue.component('cart', {
                         }
                     })
             }
-
-            // this.$parent.getJson(`${API}/addToBasket.json`)
-            //     .then(data => {
-            //         if(data.result === 1){
-            //             let find = this.cartItems.find(el => el.id_product === item.id_product);
-            //             if(find){
-            //                 find.quantity++;
-            //             } else {
-            //                 const prod = Object.assign({quantity: 1}, item);
-            //                 this.cartItems.push(prod)
-            //             }
-            //         }
-            //     })
         },
         remove(item) {
             this.$parent.getJson(`${API}/addToBasket.json`)
@@ -62,12 +48,19 @@ Vue.component('cart', {
                     }
                 })
         },
+        calculateCart() {
+            let cartPrice = 0;
+            let cart = this.cartItems[1];
+            cart.forEach(el => cartPrice += el.quantity * el.price)
+            return cartPrice;
+        },
     },
     template: `<div>
 <button class="btn-cart" type="button" @click="showCart = !showCart">Корзина</button>
         <div class="cart-block" v-show="showCart">
+        <p v-if="!cartItems.length">Cart is empty!</p>
             <cart-item v-for="item of cartItems" :key="item.id_product" :img="imgCart" :cart-item="item" @remove="remove">
-            </cart-item>
+            </cart-item>    
         </div>
         </div>
     `
@@ -81,12 +74,12 @@ Vue.component('cart-item', {
                         <img :src="img" alt="Some img">
                         <div class="product-desc">
                             <div class="product-title">{{ cartItem.product_name }}</div>
-                            <div class="product-quantity">Quantity: {{ cartItem.quantity }}</div>
-                            <div class="product-single-price">$ {{ cartItem.price }} each</div>
+                            <div class="product-quantity">Кол-во: {{ cartItem.quantity }}</div>
+                            <div class="product-single-price">Цена: {{ cartItem.price }}&#36</div>
                         </div>
                     </div>
                     <div class="right-block">
-                        <div class="product-price">{{cartItem.quantity*cartItem.price}}</div>
+                        <div class="product-price">Итого: {{cartItem.quantity*cartItem.price}}&#36</div>
                         <button class="del-btn" @click="$emit('remove', cartItem)">&times;</button>
                     </div>
                 </div>
